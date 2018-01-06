@@ -4,13 +4,12 @@
  * @var $this AddressController
  * @var $model DbsStudentAddress
  * @var $form CActiveForm
- * version: 0.0.1
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
+ * @contact (+62)856-299-4114
  * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
  * @created date 27 July 2016, 02:53 WIB
  * @link https://github.com/ommu/PSB
- * @contect (+62)856-299-4114
  *
  */
 
