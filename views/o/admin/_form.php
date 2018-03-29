@@ -89,7 +89,7 @@
 			<?php
 			!$model->isNewRecord ? ($model->birth_date != '0000-00-00' ? $model->birth_date = date('d-m-Y', strtotime($model->birth_date)) : '') : '';
 			//echo $form->textField($model,'birth_date');
-			$this->widget('zii.widgets.jui.CJuiDatePicker',array(
+			$this->widget('application.libraries.core.components.system.CJuiDatePicker',array(
 				'model'=>$model,
 				'attribute'=>'birth_date',
 				//'mode'=>'datetime',
