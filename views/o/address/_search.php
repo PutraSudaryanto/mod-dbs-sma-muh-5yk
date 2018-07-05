@@ -7,7 +7,7 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
+ * @copyright Copyright (c) 2016 Ommu Platform (www.ommu.co)
  * @created date 27 July 2016, 02:53 WIB
  * @link https://github.com/ommu/PSB
  *
@@ -21,7 +21,7 @@
 	<ul>
 		<li>
 			<?php echo $model->getAttributeLabel('address_id'); ?><br/>
-			<?php echo $form->textField($model,'address_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'address_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li>
@@ -31,27 +31,27 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('student_id'); ?><br/>
-			<?php echo $form->textField($model,'student_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'student_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('address_from'); ?><br/>
-			<?php echo $form->textArea($model,'address_from',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_from', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('address_home'); ?><br/>
-			<?php echo $form->textArea($model,'address_home',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_home', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('address_home_status'); ?><br/>
-			<?php echo $form->textArea($model,'address_home_status',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_home_status', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('address_phone'); ?><br/>
-			<?php echo $form->textField($model,'address_phone',array('size'=>15,'maxlength'=>15)); ?>
+			<?php echo $form->textField($model,'address_phone', array('size'=>15,'maxlength'=>15)); ?>
 		</li>
 
 		<li>
@@ -61,7 +61,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('school_transportation'); ?><br/>
-			<?php echo $form->textArea($model,'school_transportation',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'school_transportation', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
@@ -71,7 +71,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('creation_id'); ?><br/>
-			<?php echo $form->textField($model,'creation_id',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'creation_id', array('size'=>10,'maxlength'=>10)); ?>
 		</li>
 
 		<li>
@@ -81,7 +81,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('modified_id'); ?><br/>
-			<?php echo $form->textField($model,'modified_id',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'modified_id', array('size'=>10,'maxlength'=>10)); ?>
 		</li>
 
 		<li class="submit">

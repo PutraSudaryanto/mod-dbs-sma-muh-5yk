@@ -7,7 +7,7 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
+ * @copyright Copyright (c) 2016 Ommu Platform (www.ommu.co)
  * @created date 27 July 2016, 02:52 WIB
  * @link https://github.com/ommu/PSB
  *
@@ -41,7 +41,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'register_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'register_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'register_id', array('size'=>11,'maxlength'=>11)); ?>
 			<?php echo $form->error($model,'register_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -50,7 +50,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'student_nik'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'student_nik',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_nik', array('size'=>32,'maxlength'=>32)); ?>
 			<?php echo $form->error($model,'student_nik'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -59,7 +59,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'student_name'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'student_name',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_name', array('size'=>32,'maxlength'=>32)); ?>
 			<?php echo $form->error($model,'student_name'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -68,7 +68,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'student_nickname'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'student_nickname',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_nickname', array('size'=>32,'maxlength'=>32)); ?>
 			<?php echo $form->error($model,'student_nickname'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -77,7 +77,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'birth_city'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'birth_city',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'birth_city', array('size'=>10,'maxlength'=>10)); ?>
 			<?php echo $form->error($model,'birth_city'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -89,12 +89,12 @@
 			<?php
 			!$model->isNewRecord ? ($model->birth_date != '0000-00-00' ? $model->birth_date = date('d-m-Y', strtotime($model->birth_date)) : '') : '';
 			//echo $form->textField($model,'birth_date');
-			$this->widget('application.libraries.core.components.system.CJuiDatePicker',array(
+			$this->widget('application.libraries.core.components.system.CJuiDatePicker', array(
 				'model'=>$model,
 				'attribute'=>'birth_date',
 				//'mode'=>'datetime',
 				'options'=>array(
-					'dateFormat' => 'dd-mm-yy',
+					'dateFormat' => 'yy-mm-dd',
 				),
 				'htmlOptions'=>array(
 					'class' => 'span-4',
@@ -108,7 +108,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'gender'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'gender',array('size'=>6,'maxlength'=>6)); ?>
+			<?php echo $form->textField($model,'gender', array('size'=>6,'maxlength'=>6)); ?>
 			<?php echo $form->error($model,'gender'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -127,7 +127,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'colloquial'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'colloquial',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'colloquial', array('size'=>32,'maxlength'=>32)); ?>
 			<?php echo $form->error($model,'colloquial'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -146,7 +146,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'transfer_from'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'transfer_from',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'transfer_from', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'transfer_from'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -155,7 +155,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'transfer_reason'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'transfer_reason',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'transfer_reason', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'transfer_reason'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -164,7 +164,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>64)); ?>
+			<?php echo $form->textField($model,'email', array('size'=>60,'maxlength'=>64)); ?>
 			<?php echo $form->error($model,'email'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -183,7 +183,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'kps_number'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'kps_number',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'kps_number', array('size'=>32,'maxlength'=>32)); ?>
 			<?php echo $form->error($model,'kps_number'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -201,7 +201,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'creation_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'creation_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'creation_id', array('size'=>11,'maxlength'=>11)); ?>
 			<?php echo $form->error($model,'creation_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -219,7 +219,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'modified_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'modified_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'modified_id', array('size'=>11,'maxlength'=>11)); ?>
 			<?php echo $form->error($model,'modified_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -237,7 +237,7 @@
 <div class="dialog-content">
 </div>
 <div class="dialog-submit">
-	<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('phrase', 'Create') : Yii::t('phrase', 'Save') ,array('onclick' => 'setEnableSave()')); ?>
+	<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('phrase', 'Create') : Yii::t('phrase', 'Save') , array('onclick' => 'setEnableSave()')); ?>
 	<?php echo CHtml::button(Yii::t('phrase', 'Cancel'), array('id'=>'closed')); ?>
 </div>
 */?>

@@ -4,7 +4,7 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
+ * @copyright Copyright (c) 2016 Ommu Platform (www.ommu.co)
  * @created date 27 July 2016, 02:49 WIB
  * @link https://github.com/ommu/PSB
  *
@@ -172,38 +172,38 @@ class DbsStudents extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('t.student_id',strtolower($this->student_id),true);
-		$criteria->compare('t.status',$this->status);
-		$criteria->compare('t.register_id',strtolower($this->register_id),true);
-		$criteria->compare('t.student_nik',strtolower($this->student_nik),true);
-		$criteria->compare('t.student_name',strtolower($this->student_name),true);
-		$criteria->compare('t.student_nickname',strtolower($this->student_nickname),true);
-		$criteria->compare('t.birth_city',strtolower($this->birth_city),true);
-		if($this->birth_date != null && !in_array($this->birth_date, array('0000-00-00 00:00:00', '0000-00-00')))
-			$criteria->compare('date(t.birth_date)',date('Y-m-d', strtotime($this->birth_date)));
-		$criteria->compare('t.gender',strtolower($this->gender),true);
-		$criteria->compare('t.status_social',$this->status_social);
-		$criteria->compare('t.colloquial',strtolower($this->colloquial),true);
-		$criteria->compare('t.transfer_status',$this->transfer_status);
-		$criteria->compare('t.transfer_from',strtolower($this->transfer_from),true);
-		$criteria->compare('t.transfer_reason',strtolower($this->transfer_reason),true);
-		$criteria->compare('t.email',strtolower($this->email),true);
-		$criteria->compare('t.kps_status',$this->kps_status);
-		$criteria->compare('t.kps_number',strtolower($this->kps_number),true);
-		if($this->creation_date != null && !in_array($this->creation_date, array('0000-00-00 00:00:00', '0000-00-00')))
-			$criteria->compare('date(t.creation_date)',date('Y-m-d', strtotime($this->creation_date)));
-		if(isset($_GET['creation']))
-			$criteria->compare('t.creation_id',$_GET['creation']);
+		$criteria->compare('t.student_id', strtolower($this->student_id), true);
+		$criteria->compare('t.status', $this->status);
+		$criteria->compare('t.register_id', strtolower($this->register_id), true);
+		$criteria->compare('t.student_nik', strtolower($this->student_nik), true);
+		$criteria->compare('t.student_name', strtolower($this->student_name), true);
+		$criteria->compare('t.student_nickname', strtolower($this->student_nickname), true);
+		$criteria->compare('t.birth_city', strtolower($this->birth_city), true);
+		if($this->birth_date != null && !in_array($this->birth_date, array('0000-00-00 00:00:00','1970-01-01 00:00:00','0002-12-02 07:07:12','-0001-11-30 00:00:00')))
+			$criteria->compare('date(t.birth_date)', date('Y-m-d', strtotime($this->birth_date)));
+		$criteria->compare('t.gender', strtolower($this->gender), true);
+		$criteria->compare('t.status_social', $this->status_social);
+		$criteria->compare('t.colloquial', strtolower($this->colloquial), true);
+		$criteria->compare('t.transfer_status', $this->transfer_status);
+		$criteria->compare('t.transfer_from', strtolower($this->transfer_from), true);
+		$criteria->compare('t.transfer_reason', strtolower($this->transfer_reason), true);
+		$criteria->compare('t.email', strtolower($this->email), true);
+		$criteria->compare('t.kps_status', $this->kps_status);
+		$criteria->compare('t.kps_number', strtolower($this->kps_number), true);
+		if($this->creation_date != null && !in_array($this->creation_date, array('0000-00-00 00:00:00','1970-01-01 00:00:00','0002-12-02 07:07:12','-0001-11-30 00:00:00')))
+			$criteria->compare('date(t.creation_date)', date('Y-m-d', strtotime($this->creation_date)));
+		if(Yii::app()->getRequest()->getParam('creation'))
+			$criteria->compare('t.creation_id', Yii::app()->getRequest()->getParam('creation'));
 		else
-			$criteria->compare('t.creation_id',$this->creation_id);
-		if($this->modified_date != null && !in_array($this->modified_date, array('0000-00-00 00:00:00', '0000-00-00')))
-			$criteria->compare('date(t.modified_date)',date('Y-m-d', strtotime($this->modified_date)));
-		if(isset($_GET['modified']))
-			$criteria->compare('t.modified_id',$_GET['modified']);
+			$criteria->compare('t.creation_id', $this->creation_id);
+		if($this->modified_date != null && !in_array($this->modified_date, array('0000-00-00 00:00:00','1970-01-01 00:00:00','0002-12-02 07:07:12','-0001-11-30 00:00:00')))
+			$criteria->compare('date(t.modified_date)', date('Y-m-d', strtotime($this->modified_date)));
+		if(Yii::app()->getRequest()->getParam('modified'))
+			$criteria->compare('t.modified_id', Yii::app()->getRequest()->getParam('modified'));
 		else
-			$criteria->compare('t.modified_id',$this->modified_id);
+			$criteria->compare('t.modified_id', $this->modified_id);
 
-		if(!isset($_GET['DbsStudents_sort']))
+		if(!Yii::app()->getRequest()->getParam('DbsStudents_sort'))
 			$criteria->order = 't.student_id DESC';
 
 		return new CActiveDataProvider($this, array(
@@ -275,10 +275,10 @@ class DbsStudents extends CActiveRecord
 				'header' => 'No',
 				'value' => '$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1'
 			);
-			if(!isset($_GET['type'])) {
+			if(!Yii::app()->getRequest()->getParam('type')) {
 				$this->defaultColumns[] = array(
 					'name' => 'status',
-					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("status",array("id"=>$data->student_id)), $data->status, 1)',
+					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("status", array("id"=>$data->student_id)), $data->status, 1)',
 					'htmlOptions' => array(
 						'class' => 'center',
 					),
@@ -311,7 +311,7 @@ class DbsStudents extends CActiveRecord
 					),
 					'options'=>array(
 						'showOn' => 'focus',
-						'dateFormat' => 'dd-mm-yy',
+						'dateFormat' => 'yy-mm-dd',
 						'showOtherMonths' => true,
 						'selectOtherMonths' => true,
 						'changeMonth' => true,
@@ -321,10 +321,10 @@ class DbsStudents extends CActiveRecord
 				), true),
 			);
 			$this->defaultColumns[] = 'gender';
-			if(!isset($_GET['type'])) {
+			if(!Yii::app()->getRequest()->getParam('type')) {
 				$this->defaultColumns[] = array(
 					'name' => 'status_social',
-					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("status_social",array("id"=>$data->student_id)), $data->status_social, 1)',
+					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("status_social", array("id"=>$data->student_id)), $data->status_social, 1)',
 					'htmlOptions' => array(
 						'class' => 'center',
 					),
@@ -336,10 +336,10 @@ class DbsStudents extends CActiveRecord
 				);
 			}
 			$this->defaultColumns[] = 'colloquial';
-			if(!isset($_GET['type'])) {
+			if(!Yii::app()->getRequest()->getParam('type')) {
 				$this->defaultColumns[] = array(
 					'name' => 'transfer_status',
-					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("transfer_status",array("id"=>$data->student_id)), $data->transfer_status, 1)',
+					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("transfer_status", array("id"=>$data->student_id)), $data->transfer_status, 1)',
 					'htmlOptions' => array(
 						'class' => 'center',
 					),
@@ -353,10 +353,10 @@ class DbsStudents extends CActiveRecord
 			$this->defaultColumns[] = 'transfer_from';
 			$this->defaultColumns[] = 'transfer_reason';
 			$this->defaultColumns[] = 'email';
-			if(!isset($_GET['type'])) {
+			if(!Yii::app()->getRequest()->getParam('type')) {
 				$this->defaultColumns[] = array(
 					'name' => 'kps_status',
-					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("kps_status",array("id"=>$data->student_id)), $data->kps_status, 1)',
+					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("kps_status", array("id"=>$data->student_id)), $data->kps_status, 1)',
 					'htmlOptions' => array(
 						'class' => 'center',
 					),
@@ -385,7 +385,7 @@ class DbsStudents extends CActiveRecord
 					),
 					'options'=>array(
 						'showOn' => 'focus',
-						'dateFormat' => 'dd-mm-yy',
+						'dateFormat' => 'yy-mm-dd',
 						'showOtherMonths' => true,
 						'selectOtherMonths' => true,
 						'changeMonth' => true,
@@ -412,7 +412,7 @@ class DbsStudents extends CActiveRecord
 					),
 					'options'=>array(
 						'showOn' => 'focus',
-						'dateFormat' => 'dd-mm-yy',
+						'dateFormat' => 'yy-mm-dd',
 						'showOtherMonths' => true,
 						'selectOtherMonths' => true,
 						'changeMonth' => true,
@@ -432,7 +432,7 @@ class DbsStudents extends CActiveRecord
 	public static function getInfo($id, $column=null)
 	{
 		if($column != null) {
-			$model = self::model()->findByPk($id,array(
+			$model = self::model()->findByPk($id, array(
 				'select' => $column,
 			));
  			if(count(explode(',', $column)) == 1)

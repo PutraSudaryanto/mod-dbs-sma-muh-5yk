@@ -7,7 +7,7 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
+ * @copyright Copyright (c) 2016 Ommu Platform (www.ommu.co)
  * @created date 27 July 2016, 02:52 WIB
  * @link https://github.com/ommu/PSB
  *
@@ -21,7 +21,7 @@
 	<ul>
 		<li>
 			<?php echo $model->getAttributeLabel('student_id'); ?><br/>
-			<?php echo $form->textField($model,'student_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'student_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li>
@@ -31,27 +31,27 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('register_id'); ?><br/>
-			<?php echo $form->textField($model,'register_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'register_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('student_nik'); ?><br/>
-			<?php echo $form->textField($model,'student_nik',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_nik', array('size'=>32,'maxlength'=>32)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('student_name'); ?><br/>
-			<?php echo $form->textField($model,'student_name',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_name', array('size'=>32,'maxlength'=>32)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('student_nickname'); ?><br/>
-			<?php echo $form->textField($model,'student_nickname',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'student_nickname', array('size'=>32,'maxlength'=>32)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('birth_city'); ?><br/>
-			<?php echo $form->textField($model,'birth_city',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'birth_city', array('size'=>10,'maxlength'=>10)); ?>
 		</li>
 
 		<li>
@@ -61,7 +61,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('gender'); ?><br/>
-			<?php echo $form->textField($model,'gender',array('size'=>6,'maxlength'=>6)); ?>
+			<?php echo $form->textField($model,'gender', array('size'=>6,'maxlength'=>6)); ?>
 		</li>
 
 		<li>
@@ -71,7 +71,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('colloquial'); ?><br/>
-			<?php echo $form->textField($model,'colloquial',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'colloquial', array('size'=>32,'maxlength'=>32)); ?>
 		</li>
 
 		<li>
@@ -81,17 +81,17 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('transfer_from'); ?><br/>
-			<?php echo $form->textArea($model,'transfer_from',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'transfer_from', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('transfer_reason'); ?><br/>
-			<?php echo $form->textArea($model,'transfer_reason',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'transfer_reason', array('rows'=>6, 'cols'=>50)); ?>
 		</li>
 
 		<li>
 			<?php echo $model->getAttributeLabel('email'); ?><br/>
-			<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>64)); ?>
+			<?php echo $form->textField($model,'email', array('size'=>60,'maxlength'=>64)); ?>
 		</li>
 
 		<li>
@@ -101,7 +101,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('kps_number'); ?><br/>
-			<?php echo $form->textField($model,'kps_number',array('size'=>32,'maxlength'=>32)); ?>
+			<?php echo $form->textField($model,'kps_number', array('size'=>32,'maxlength'=>32)); ?>
 		</li>
 
 		<li>
@@ -111,7 +111,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('creation_id'); ?><br/>
-			<?php echo $form->textField($model,'creation_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'creation_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li>
@@ -121,7 +121,7 @@
 
 		<li>
 			<?php echo $model->getAttributeLabel('modified_id'); ?><br/>
-			<?php echo $form->textField($model,'modified_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'modified_id', array('size'=>11,'maxlength'=>11)); ?>
 		</li>
 
 		<li class="submit">

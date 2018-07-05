@@ -7,7 +7,7 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2016 Ommu Platform (opensource.ommu.co)
+ * @copyright Copyright (c) 2016 Ommu Platform (www.ommu.co)
  * @created date 27 July 2016, 02:53 WIB
  * @link https://github.com/ommu/PSB
  *
@@ -41,7 +41,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'student_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'student_id',array('size'=>11,'maxlength'=>11)); ?>
+			<?php echo $form->textField($model,'student_id', array('size'=>11,'maxlength'=>11)); ?>
 			<?php echo $form->error($model,'student_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -50,7 +50,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'address_from'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'address_from',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_from', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'address_from'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -59,7 +59,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'address_home'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'address_home',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_home', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'address_home'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -68,7 +68,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'address_home_status'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'address_home_status',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'address_home_status', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'address_home_status'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -77,7 +77,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'address_phone'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'address_phone',array('size'=>15,'maxlength'=>15)); ?>
+			<?php echo $form->textField($model,'address_phone', array('size'=>15,'maxlength'=>15)); ?>
 			<?php echo $form->error($model,'address_phone'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -95,7 +95,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'school_transportation'); ?>
 		<div class="desc">
-			<?php echo $form->textArea($model,'school_transportation',array('rows'=>6, 'cols'=>50)); ?>
+			<?php echo $form->textArea($model,'school_transportation', array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($model,'school_transportation'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -113,7 +113,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'creation_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'creation_id',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'creation_id', array('size'=>10,'maxlength'=>10)); ?>
 			<?php echo $form->error($model,'creation_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -131,7 +131,7 @@
 	<div class="clearfix">
 		<?php echo $form->labelEx($model,'modified_id'); ?>
 		<div class="desc">
-			<?php echo $form->textField($model,'modified_id',array('size'=>10,'maxlength'=>10)); ?>
+			<?php echo $form->textField($model,'modified_id', array('size'=>10,'maxlength'=>10)); ?>
 			<?php echo $form->error($model,'modified_id'); ?>
 			<?php /*<div class="small-px silent"></div>*/?>
 		</div>
@@ -149,7 +149,7 @@
 <div class="dialog-content">
 </div>
 <div class="dialog-submit">
-	<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('phrase', 'Create') : Yii::t('phrase', 'Save') ,array('onclick' => 'setEnableSave()')); ?>
+	<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('phrase', 'Create') : Yii::t('phrase', 'Save') , array('onclick' => 'setEnableSave()')); ?>
 	<?php echo CHtml::button(Yii::t('phrase', 'Cancel'), array('id'=>'closed')); ?>
 </div>
 */?>
