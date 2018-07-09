@@ -14,7 +14,7 @@
  */
 ?>
 
-<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
+<?php $form=$this->beginWidget('application.libraries.yii-traits.system.OActiveForm', array(
 	'id'=>'dbs-students-form',
 	'enableAjaxValidation'=>true,
 	//'htmlOptions' => array('enctype' => 'multipart/form-data')
@@ -89,7 +89,7 @@
 			<?php
 			!$model->isNewRecord ? ($model->birth_date != '0000-00-00' ? $model->birth_date = date('d-m-Y', strtotime($model->birth_date)) : '') : '';
 			//echo $form->textField($model,'birth_date');
-			$this->widget('application.libraries.core.components.system.CJuiDatePicker', array(
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 				'model'=>$model,
 				'attribute'=>'birth_date',
 				//'mode'=>'datetime',
