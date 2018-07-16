@@ -295,7 +295,7 @@ class DbsStudents extends CActiveRecord
 			$this->defaultColumns[] = 'birth_city';
 			$this->defaultColumns[] = array(
 				'name' => 'birth_date',
-				'value' => 'Utility::dateFormat($data->birth_date)',
+				'value' => 'Yii::app()->dateFormatter->formatDateTime($data->birth_date, \'medium\', false)',
 				'htmlOptions' => array(
 					'class' => 'center',
 				),
@@ -342,7 +342,7 @@ class DbsStudents extends CActiveRecord
 			$this->defaultColumns[] = 'kps_number';
 			$this->defaultColumns[] = array(
 				'name' => 'creation_date',
-				'value' => 'Utility::dateFormat($data->creation_date)',
+				'value' => 'Yii::app()->dateFormatter->formatDateTime($data->creation_date, \'medium\', false)',
 				'htmlOptions' => array(
 					'class' => 'center',
 				),
@@ -351,7 +351,7 @@ class DbsStudents extends CActiveRecord
 			$this->defaultColumns[] = 'creation_id';
 			$this->defaultColumns[] = array(
 				'name' => 'modified_date',
-				'value' => 'Utility::dateFormat($data->modified_date)',
+				'value' => 'Yii::app()->dateFormatter->formatDateTime($data->modified_date, \'medium\', false)',
 				'htmlOptions' => array(
 					'class' => 'center',
 				),

@@ -255,7 +255,7 @@ class DbsStudentHealth extends CActiveRecord
 			$this->defaultColumns[] = 'height_and_weight';
 			$this->defaultColumns[] = array(
 				'name' => 'creation_date',
-				'value' => 'Utility::dateFormat($data->creation_date)',
+				'value' => 'Yii::app()->dateFormatter->formatDateTime($data->creation_date, \'medium\', false)',
 				'htmlOptions' => array(
 					'class' => 'center',
 				),
@@ -264,7 +264,7 @@ class DbsStudentHealth extends CActiveRecord
 			$this->defaultColumns[] = 'creation_id';
 			$this->defaultColumns[] = array(
 				'name' => 'modified_date',
-				'value' => 'Utility::dateFormat($data->modified_date)',
+				'value' => 'Yii::app()->dateFormatter->formatDateTime($data->modified_date, \'medium\', false)',
 				'htmlOptions' => array(
 					'class' => 'center',
 				),
