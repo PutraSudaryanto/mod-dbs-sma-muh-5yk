@@ -174,7 +174,7 @@ class HealthController extends Controller
 	public function actionManage() 
 	{
 		$model=new DbsStudentHealth('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes();	// clear any default values
 		if(isset($_GET['DbsStudentHealth'])) {
 			$model->attributes=$_GET['DbsStudentHealth'];
 		}

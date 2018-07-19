@@ -174,7 +174,7 @@ class AddressController extends Controller
 	public function actionManage() 
 	{
 		$model=new DbsStudentAddress('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes();	// clear any default values
 		if(isset($_GET['DbsStudentAddress'])) {
 			$model->attributes=$_GET['DbsStudentAddress'];
 		}

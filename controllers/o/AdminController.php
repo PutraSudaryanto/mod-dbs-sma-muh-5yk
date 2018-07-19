@@ -174,7 +174,7 @@ class AdminController extends Controller
 	public function actionManage() 
 	{
 		$model=new DbsStudents('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes();	// clear any default values
 		if(isset($_GET['DbsStudents'])) {
 			$model->attributes=$_GET['DbsStudents'];
 		}
