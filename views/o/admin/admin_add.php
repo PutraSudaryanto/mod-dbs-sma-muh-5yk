@@ -15,7 +15,7 @@
 
 	$this->breadcrumbs=array(
 		'Dbs Students'=>array('manage'),
-		'Create',
+		Yii::t('phrase', 'Create'),
 	);
 ?>
 

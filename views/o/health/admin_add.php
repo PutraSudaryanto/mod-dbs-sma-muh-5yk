@@ -15,7 +15,7 @@
 
 	$this->breadcrumbs=array(
 		'Dbs Student Healths'=>array('manage'),
-		'Create',
+		Yii::t('phrase', 'Create'),
 	);
 ?>
 

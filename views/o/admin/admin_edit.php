@@ -16,7 +16,7 @@
 	$this->breadcrumbs=array(
 		'Dbs Students'=>array('manage'),
 		$model->student_id=>array('view','id'=>$model->student_id),
-		'Update',
+		Yii::t('phrase', 'Update'),
 	);
 ?>
 

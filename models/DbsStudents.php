@@ -280,7 +280,7 @@ class DbsStudents extends CActiveRecord
 			if(!Yii::app()->getRequest()->getParam('type')) {
 				$this->defaultColumns[] = array(
 					'name' => 'status',
-					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl("status", array("id"=>$data->student_id)), $data->status, 1)',
+					'value' => 'Utility::getPublish(Yii::app()->controller->createUrl(\'status\', array(\'id\'=>$data->student_id)), $data->status, 1)',
 					'htmlOptions' => array(
 						'class' => 'center',
 					),
